@@ -1,8 +1,0 @@
-install from source folder
-edit config.xml installURL, updateURL to install folder
-restart
-
-when adding require files:
-    - edit config.xml
-    - restart
-
