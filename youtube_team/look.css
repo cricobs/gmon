@@ -1,0 +1,25 @@
+#team-form {
+    display: inline-block;
+}
+
+#team-oput {
+    display: inline-block;
+    line-height: 20px;
+    margin-left: 6px;
+    width: 110px
+}
+
+.guide-item .guide-sort-container button:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#guide-channels li:not(.team) {
+    position: relative;
+}
+
+.team-menu {
+    position: absolute;
+}

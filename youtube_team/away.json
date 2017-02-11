@@ -1,0 +1,16 @@
+{
+  "team": {
+    "picks": {
+      "root": "#guide-channels",
+      "list": "#VLWL-guide-item",
+      "menu": ".yt-uix-button-menu-hover-action-menu"
+    }
+  },
+  "feed": {
+    "picks": {
+      "root": "#guide-channels",
+      "list": "#guide-channels > li:not(.team)",
+      "knob": ".guide-sort-container:first"
+    }
+  }
+}
