@@ -107,7 +107,7 @@ PickHere.prototype.read = function (data) {
         .reduce(function (picks, pick) {
             picks[pick.getAttribute('title')] = {
                 picks: $(pick)
-                    .find(".part")
+                    .find(".last_movie")
                     .get()
                     .reduce(function (picks, pick) {
                         picks[pick.getAttribute('title')] = pick;

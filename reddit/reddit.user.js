@@ -93,7 +93,7 @@ $(".thing a").click(function (e) {
     return false;
 });
 
-// add custom links
+// add custom last_versions
 function html_link(name, href) {
     return '<li>\
         <a href="' + href + '" class="choice">' + name + '</a>\

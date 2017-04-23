@@ -6,12 +6,11 @@
 // @grant       GM_setValue
 // @grant       GM_getValue
 // @require http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @description primewire remove sponsored links|click unique search result|click preferred links
+// @description primewire remove sponsored last_versions|click unique search result|click preferred last_versions
 // ==/UserScript==
 
 // version block
 var block = ['sponsor host', "promo host"];
-
 $("table.movie_version").each(function () {
     var sample = $(this).find(".version_host").text().toLowerCase();
     var length = block.length;
@@ -24,7 +23,6 @@ $("table.movie_version").each(function () {
 
 // search result
 var items = $(".index_item.index_item_ie");
-
 if (items.length == 1) {
     window.location.assign(items.find("a").attr("href"));
 }
@@ -34,74 +32,46 @@ if (items.length == 1) {
  if the same movie is visited multiple times consecutively, link will be assumed broken, a new one will be selected.
  it will be forgotten when a new movie is visited.
  */
-
 var sites = [
-    "novamov",
-    "filenuke",
-    "sharesix",
-    "bestreams",
-    "gorillavid",
-    "streamin",
+    "vidlox",
     "vidzi",
-    "vodlocker",
-    "streamplay"
+    "streamin",
+    "gorillavid",
+    "bestreams",
+    "sharesix",
+    "filenuke",
+    "novamov"
 ];
-
 var versions = $('.movie_version');
-var part = GM_getValue("last_part");
-var links = JSON.parse(GM_getValue("last_links", "[]"));
-var site, version, link, g, i;
-for (g = sites.length - 1; g > -1; g--) {
-    site = sites[g];
-    for (i = versions.length - 1; i > -1; i--) {
-        version = $(versions[i]).find('.version_host').text();
-        if (version.indexOf(site) > -1) {
-            link = $(versions[i]).find("a");
-
-            if (part == window.location.href) {
-                if (links.indexOf(link.attr("href")) != -1) {
-                    continue;
-                }
-                links.push(link.attr("href"))
-
-            } else {
-                part = window.location.href;
-                links = [link.attr("href")];
+var last_movie = GM_getValue("last_movie");
+var last_versions = JSON.parse(GM_getValue("last_versions", "[]"));
+var site, site_versions, site_version, i, j;
+for (i = 0; i < sites.length; i++) {
+    site = sites[i];
+    // using rating url as reference
+    site_versions = versions.find("a[href*='" + site + "']:first");
+    for (j = 0; j < site_versions.length; j++) {
+        site_version = $(site_versions[j]);
+        if (last_movie == window.location.href) {
+            if (last_versions.indexOf(site_version.attr("href")) != -1) {
+                continue;
             }
+            last_versions.push(site_version.attr("href"));
 
-            GM_setValue("last_part", part);
-            GM_setValue("last_links", JSON.stringify(links));
-
-            window.location.assign(link.attr("href"));
-
-            i = g = -2;
+        } else {
+            last_movie = window.location.href;
+            last_versions = [site_version.attr("href")];
         }
-    }
-}
 
-if (g == -1) {
-    for (g = sites.length - 1; g > -1; g--) {
-        site = sites[g];
-        for (i = versions.length - 1; i > -1; i--) {
-            link = $(versions[i]).find("a");
+        GM_setValue("last_movie", last_movie);
+        GM_setValue("last_versions", JSON.stringify(last_versions));
+        window.location.assign(site_version
+            .closest(".movie_version")
+            .find(".movie_version_link a")
+            .attr("href")
+        );
 
-            if (part == window.location.href) {
-                if (links.indexOf(link.attr("href")) != -1) {
-                    continue;
-                }
-                links.push(link.attr("href"))
-
-            } else {
-                part = window.location.href;
-                links = [link.attr("href")];
-            }
-
-            GM_setValue("last_part", part);
-            GM_setValue("last_links", JSON.stringify(links));
-
-            window.location.assign(link.attr("href"));
-
-            i = g = -2;
-        }
+        j = site_versions.length;
+        i = sites.length;
     }
 }

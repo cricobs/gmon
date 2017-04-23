@@ -10,7 +10,7 @@
 		<Include>*sharesix.com*</Include>
 		<Include>http://bestreams.net*</Include>
 	</Script>
-	<Script basedir="player_play" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="flvplayer play" enabled="false" filename="player_play.user.js" installTime="1459976638000" modified="1486275228000" name="player play" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="2b11456c-7174-48db-b0f3-4bb85b3055f7" version="1" installurl="https://greasyfork.org/scripts/18554-player-play/code/player%20play.user.js" updateurl="https://greasyfork.org/scripts/18554-player-play/code/player%20play.user.js">
+	<Script basedir="player_play" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="flvplayer play" enabled="true" filename="player_play.user.js" installTime="1459976638000" modified="1486275228000" name="player play" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="ok" uuid="2b11456c-7174-48db-b0f3-4bb85b3055f7" version="1" installurl="https://greasyfork.org/scripts/18554-player-play/code/player%20play.user.js" updateurl="https://greasyfork.org/scripts/18554-player-play/code/player%20play.user.js">
 		<Grant>none</Grant>
 		<Include>*vodlocker.com*</Include>
 		<Include>http://vidzi.tv/*</Include>
@@ -32,7 +32,7 @@
 		<Grant>none</Grant>
 		<Include>http://www.eldiario.es*</Include>
 	</Script>
-	<Script basedir="reddit" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="reddit upvote post on hover|remove matching text from post|hide all posts on next page clicked" enabled="true" filename="reddit.user.js" installTime="1459445632000" modified="1460727050000" name="reddit" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="fail" uuid="58545e96-b820-4720-b297-10cb106f161b" version="1.0.2" installurl="https://greasyfork.org/scripts/18399-reddit/code/reddit.user.js" updateurl="https://greasyfork.org/scripts/18399-reddit/code/reddit.user.js">
+	<Script basedir="reddit" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="reddit upvote post on hover|remove matching text from post|hide all posts on next page clicked" enabled="false" filename="reddit.user.js" installTime="1459445632000" modified="1492976092000" name="reddit" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="fail" uuid="58545e96-b820-4720-b297-10cb106f161b" version="1.0.2" installurl="https://greasyfork.org/scripts/18399-reddit/code/reddit.user.js" updateurl="https://greasyfork.org/scripts/18399-reddit/code/reddit.user.js">
 		<Grant>none</Grant>
 		<Include>https://www.reddit.com/*</Include>
 	</Script>
@@ -124,21 +124,17 @@
 		<Include>http://php.net/manual/*</Include>
 		<Require filename="jquery.min.js"/>
 	</Script>
-	<Script basedir="archive" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="archive.user.js" installTime="1470058395000" modified="1470059204000" name="archive" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="d9efaeb8-8ea4-4a16-8128-f811d94b58de" version="1" installurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/archive/archive.user.js" updateurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/archive/archive.user.js">
+	<Script basedir="archive" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="archive.user.js" installTime="1470058395000" modified="1486796416000" name="archive" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="d9efaeb8-8ea4-4a16-8128-f811d94b58de" version="1" installurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/archive/archive.user.js" updateurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/archive/archive.user.js">
 		<Grant>none</Grant>
 		<Include>https://archive.org/*</Include>
 	</Script>
-	<Script basedir="primewire" checkRemoteUpdates="1" dependhash="acc535b968e5767dd8efeebe990f267a42400760" description="primewire remove sponsored links|click unique search result|click preferred links" enabled="true" filename="primewire.user.js" installTime="1471301986000" modified="1486274711000" name="primewire" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="eb01832d-a691-426a-b224-bd9262451ff6" version="1" installurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/primewire.user.js" updateurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/primewire.user.js">
+	<Script basedir="primewire" checkRemoteUpdates="1" dependhash="acc535b968e5767dd8efeebe990f267a42400760" description="primewire remove sponsored last_versions|click unique search result|click preferred last_versions" enabled="true" filename="primewire.user.js" installTime="1471301986000" modified="1492979500000" name="primewire" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="eb01832d-a691-426a-b224-bd9262451ff6" version="1" installurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/primewire.user.js" updateurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/primewire.user.js">
 		<Grant>GM_setValue</Grant>
 		<Grant>GM_getValue</Grant>
 		<Include>http://www.primewire.ag/*</Include>
 		<Require filename="jquery.min.js"/>
 	</Script>
-	<Script basedir="test1" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="test1.user.js" installTime="1471305636000" modified="1472190444000" name="test1" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="9cde45cb-af6f-432c-a3aa-66a6837b1872" version="1" installurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/test1/test1.user.js" updateurl="file:///mnt/5A3C465D2808F069/data/mozilla/firefox/sync/gm_scripts/test1/test1.user.js">
-		<Grant>none</Grant>
-		<Include>https://wiki.greasespot.net/FAQ</Include>
-	</Script>
-	<Script basedir="random" checkRemoteUpdates="1" dependhash="1823a10af53a280770ac3223336f09af1275c216" description="" enabled="false" filename="random.user.js" installTime="1472184121000" modified="1472824660000" name="random" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="1e89a9b9-ea0f-4d57-96c0-3371c1cbbfa7" version="1" installurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/random/random.user.js" updateurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/random/random.user.js">
+	<Script basedir="random" checkRemoteUpdates="1" dependhash="1823a10af53a280770ac3223336f09af1275c216" description="" enabled="true" filename="random.user.js" installTime="1472184121000" modified="1472824660000" name="random" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="1e89a9b9-ea0f-4d57-96c0-3371c1cbbfa7" version="1" installurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/random/random.user.js" updateurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/random/random.user.js">
 		<Grant>GM_openInTab</Grant>
 		<Grant>GM_getValue</Grant>
 		<Grant>GM_setValue</Grant>
@@ -170,5 +166,9 @@
 	<Script basedir="youtube_reload" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="youtube_reload.user.js" installTime="1473949000000" modified="1482524681000" name="youtube reload" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="833656ed-33f0-44e3-84a7-f3d22731ab9a" version="1" installurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/youtube_reload/youtube_reload.user.js" updateurl="file:///mnt/5A3C465D2808F069/scripts/javascript/gmon/youtube_reload/youtube_reload.user.js">
 		<Grant>none</Grant>
 		<Include>https://www.youtube.com/watch?*</Include>
+	</Script>
+	<Script basedir="wordplays" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="wordplays.user.js" installTime="1487158497000" modified="1487239051000" name="wordplays" namespace="manobastardo" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="ac7802d0-c907-4e98-b7b0-8082f80ce5b1" version="1" installurl="file:///mnt/7597ECC22B316B49/data/mozilla/firefox/001/gm_scripts/wordplays/wordplays.user.js" updateurl="file:///mnt/7597ECC22B316B49/data/mozilla/firefox/001/gm_scripts/wordplays/wordplays.user.js">
+		<Grant>none</Grant>
+		<Include>http://www.wordplays.com/*</Include>
 	</Script>
 </UserScriptConfig>
